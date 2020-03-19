@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         
         let cc=ss.getContext?()
         
-        print("")
+        print(cc?.parameters)
     }
 }
 
