@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ABG"
-  spec.version      = "1.3.0"
+  spec.version      = "1.4.0"
   spec.summary      = "ABG是一个用于iOS-OSX平台的中间件，一个轻量级的模块间交互解耦中间件。"
 
   # This description is used to generate tags and improve search results.
@@ -62,7 +62,7 @@ Pod::Spec.new do |spec|
 
   # spec.platform     = :ios
   # spec.platform     = :ios, "5.0"
-  swift_versions = '5.0' 
+  spec.swift_versions = '5.0' 
 
   #  When using multiple platforms
   spec.ios.deployment_target = "10.0"
