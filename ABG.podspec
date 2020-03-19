@@ -24,6 +24,6 @@ Pod::Spec.new do |spec|
   
   spec.source       = { :git => "https://github.com/debugmm/ABG.git", :tag => "#{spec.version}" }
 
-  spec.source_files  = "ABG/*.{h,m}"
+  spec.source_files  = "ABG/*.{swift}"
 
 end
