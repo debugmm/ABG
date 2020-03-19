@@ -8,4 +8,7 @@
 
 import UIKit
 
+let argc = CommandLine.argc // Swift 3 把 Process改为CommandLine 了
+let argv = UnsafeMutablePointer<UnsafeMutablePointer<Int8>>.allocate(capacity: Int(CommandLine.argc))
+
 UIApplicationMain(CommandLine.argc, CommandLine.unsafeArgv, nil,NSStringFromClass(AppDelegate.self))
