@@ -11,7 +11,7 @@ import Foundation
 /// 各个模块之间，总是存在这样 客户:服务（M:N），并且各种服务可以分成两大类：push、pull
 /// SwiftABG，用来各个模块之间注册服务，客户注册需要关注的服务
 
-class ABG{
+public class ABG{
     //singleton
     static let shared=ABG.init()
     

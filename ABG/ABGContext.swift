@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ABGContext:NSObject{
+public class ABGContext:NSObject{
     var parameters:Any
     
     init(parameters:Any) {
