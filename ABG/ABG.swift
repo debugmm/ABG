@@ -15,48 +15,42 @@ public class ABG{
     //singleton
     static let shared=ABG.init()
     
-    func registService(service:NSObjectProtocol,key:Protocol){
-        let abgK=ABGKey.init(proto: key)
+    func registService(service:AnyObject,key:Protocol){
+        let pS=NSStringFromProtocol(key)
         
-        self.map.setObject(service, forKey: abgK)
+        self.map.setObject(service, forKey: NSString.init(string: pS))
     }
     
-    func getService(key:Protocol) -> NSObjectProtocol?{
-        let abgkey=ABGKey.init(proto: key)
-        let s=self.map.object(forKey: abgkey)
+    func getService(key:Protocol) -> AnyObject?{
+        let pS=NSStringFromProtocol(key)
+        let s=self.map.object(forKey: NSString.init(string: pS))
         
-        guard let ss = s as? NSObjectProtocol else{
-            return nil
-        }
-        
-        return ss
+        return s
     }
     
-    func addTarget(target:NSObjectProtocol,keyP:Protocol,keyS:Selector){
-        let keyAction=ABGActionKey.init(proto: keyP, action: keyS)
-        self.map.setObject(target, forKey: keyAction)
+    func addTarget(target:AnyObject,keyP:Protocol,keyS:Selector){
+        self.map.setObject(target, forKey: self.convertProtocolActionToString(proto: keyP, action: keyS))
     }
     
-    func getTarget(keyP:Protocol,keyS:Selector) -> NSObjectProtocol?{
-        let keyAction=ABGActionKey.init(proto: keyP, action: keyS)
-        let t=self.map.object(forKey: keyAction)
+    func getTarget(keyP:Protocol,keyS:Selector) -> AnyObject?{
+        let t=self.map.object(forKey: self.convertProtocolActionToString(proto: keyP, action: keyS))
         
-        guard let tt = t as? NSObjectProtocol else{
-            return nil
-        }
-        
-        return tt
+        return t
     }
-    
-    func getTargets(key:Protocol){
         
-    }
-    
     //MARK: - private
-    private let map:NSMapTable<ABGKey,AnyObject>
+    private let map:NSMapTable<NSString,AnyObject>
     //private init
     private init(){
-        self.map=NSMapTable<ABGKey,AnyObject>.strongToWeakObjects()
+        self.map=NSMapTable<NSString,AnyObject>.strongToWeakObjects()
+    }
+    
+    private func convertProtocolActionToString(proto:Protocol,action:Selector) -> NSString{
+        let pS=NSStringFromProtocol(proto)
+        let aS=NSStringFromSelector(action)
+        let keyS=NSString.init(string: pS+aS)
+        
+        return keyS
     }
 }
 

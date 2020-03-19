@@ -15,6 +15,8 @@
 		16676EAE2423974800ED1531 /* ABG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16676EAC2423974700ED1531 /* ABG.swift */; };
 		16676EAF2423974800ED1531 /* ABGContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16676EAD2423974700ED1531 /* ABGContext.swift */; };
 		16676EB12423979100ED1531 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16676EB02423979000ED1531 /* main.swift */; };
+		16676EB3242398B500ED1531 /* TestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16676EB2242398B500ED1531 /* TestService.swift */; };
+		16676EB5242398C900ED1531 /* TestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16676EB4242398C900ED1531 /* TestProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		16676EAC2423974700ED1531 /* ABG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABG.swift; sourceTree = "<group>"; };
 		16676EAD2423974700ED1531 /* ABGContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABGContext.swift; sourceTree = "<group>"; };
 		16676EB02423979000ED1531 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		16676EB2242398B500ED1531 /* TestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestService.swift; sourceTree = "<group>"; };
+		16676EB4242398C900ED1531 /* TestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				16676EB02423979000ED1531 /* main.swift */,
 				16676E7B2423972200ED1531 /* AppDelegate.swift */,
 				16676E7F2423972200ED1531 /* ViewController.swift */,
+				16676EB2242398B500ED1531 /* TestService.swift */,
+				16676EB4242398C900ED1531 /* TestProtocol.swift */,
 				16676E842423972700ED1531 /* Assets.xcassets */,
 				16676E892423972700ED1531 /* Info.plist */,
 			);
@@ -266,9 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16676EB5242398C900ED1531 /* TestProtocol.swift in Sources */,
 				16676E802423972200ED1531 /* ViewController.swift in Sources */,
 				16676EB12423979100ED1531 /* main.swift in Sources */,
 				16676EAF2423974800ED1531 /* ABGContext.swift in Sources */,
+				16676EB3242398B500ED1531 /* TestService.swift in Sources */,
 				16676E7C2423972200ED1531 /* AppDelegate.swift in Sources */,
 				16676EAE2423974800ED1531 /* ABG.swift in Sources */,
 			);
