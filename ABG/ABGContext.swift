@@ -9,9 +9,9 @@
 import Foundation
 
 public class ABGContext:NSObject{
-    var parameters:Any
+    public var parameters:Any
     
-    init(parameters:Any) {
+    public init(parameters:Any) {
         self.parameters=parameters
     }
 }

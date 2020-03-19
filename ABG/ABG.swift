@@ -11,11 +11,11 @@ import Foundation
 /// 各个模块之间，总是存在这样 客户:服务（M:N），并且各种服务可以分成两大类：push、pull
 /// SwiftABG，用来各个模块之间注册服务，客户注册需要关注的服务
 
-public class ABG{
+public class ABG {
     //singleton
-    static let shared=ABG.init()
+    public static let shared=ABG.init()
     
-    func registService(service:AnyObject,key:Protocol,cached:Bool = false){
+    public func registService(service:AnyObject,key:Protocol,cached:Bool = false){
         let pS=NSStringFromProtocol(key)
         if(cached){
             self.map.setObject(service, forKey: NSString.init(string: pS))
@@ -25,7 +25,7 @@ public class ABG{
         }
     }
     
-    func getService(key:Protocol) -> AnyObject?{
+    public func getService(key:Protocol) -> AnyObject?{
         let pS=NSStringFromProtocol(key)
         var s=self.map.object(forKey: NSString.init(string: pS))
         if(s==nil){
@@ -35,7 +35,7 @@ public class ABG{
         return s
     }
     
-    func addTarget(target:AnyObject,keyP:Protocol,keyS:Selector,cached:Bool = false){
+    public func addTarget(target:AnyObject,keyP:Protocol,keyS:Selector,cached:Bool = false){
         if(cached){
             self.map.setObject(target, forKey: self.convertProtocolActionToString(proto: keyP, action: keyS))
         }
@@ -44,7 +44,7 @@ public class ABG{
         }
     }
     
-    func getTarget(keyP:Protocol,keyS:Selector) -> AnyObject?{
+    public func getTarget(keyP:Protocol,keyS:Selector) -> AnyObject?{
         var t=self.map.object(forKey: self.convertProtocolActionToString(proto: keyP, action: keyS))
         if(t==nil){
             t=self.weakMap.object(forKey: self.convertProtocolActionToString(proto: keyP, action: keyS))
