@@ -1,0 +1,4 @@
+*.swift linguist-language=swift
+*.js linguist-language=swift
+*.html linguist-language=swift
+*.css linguist-language=swift
