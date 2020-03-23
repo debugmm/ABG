@@ -10,7 +10,7 @@
 
 ### ABG + Rx
 
-1. Rx常常与MVVM一起，让人印象深刻。Rx框架帮我们欢乐的实现了函数式响应编程，让数据在管控的道路上，自由奔跑。but，当我们尝试让数据在不同模块之间流动时，就会意识到直接的Rx会导致混乱的情形，相互之间紧紧连接的问题。
+1. Rx常常与MVVM一起，让人印象深刻。Rx框架帮我们欢乐的实现了“a library for composing asynchronous and event-based programs by using observable sequences.”编程，让数据在管控的道路上，自由奔跑。but，当我们尝试让数据在不同模块之间流动时，就会意识到直接的Rx会导致混乱的情形，相互之间紧紧连接的问题。
    
 2. 于是，ABG来了。ABG规范模块之间采用协议注册服务，需求方采用协议注册action注册自己（target）；
 
